@@ -27,7 +27,7 @@ class ComponentInstaller(IComponentInstaller):
         os.system("cp -r fonts/* ~/.fonts")
 
     def install_themes(self):
-        os.system("cp -r local/share/icons/* ~/.local/share/icons")
+        os.system("cp -r local/share/* ~/.local/share/")
         os.system("cp -r themes ~/.themes")
 
     def move_images(self):
