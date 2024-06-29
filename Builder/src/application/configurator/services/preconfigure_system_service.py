@@ -16,5 +16,3 @@ class PreconfigureSystemService:
         self.preconfigurator.update_arch_db()
         self.logger.info('Enabling aur')
         self.preconfigurator.enable_aur()
-        self.logger.info('Creating folders in home dir')
-        self.preconfigurator.fill_home_dir()
