@@ -10,11 +10,3 @@ class Preconfigurator(IPreconfigurator):
     def enable_aur(self):
         os.system("git -C /tmp clone https://aur.archlinux.org/aura-bin.git")
         os.system("cd /tmp/aura-bin && makepkg -si")
-
-    def fill_home_dir(self):
-        os.system('mkdir ~/Downloads')
-        os.system('mkdir ~/Desktop')
-        os.system('mkdir ~/Documents')
-        os.system('mkdir ~/Images')
-        os.system('mkdir ~/Music')
-        os.system('mkdir ~/Videos')

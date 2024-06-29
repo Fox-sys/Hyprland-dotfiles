@@ -69,10 +69,6 @@ class IPreconfigurator(ABC):
     def update_arch_db(self):
         raise NotImplementedError
 
-    @abstractmethod
-    def fill_home_dir(self):
-        raise NotImplementedError
-
 
 class IPostInstallConfigurator(ABC):
     @abstractmethod
