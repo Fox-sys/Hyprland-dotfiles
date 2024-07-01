@@ -31,4 +31,4 @@ class ComponentInstaller(IComponentInstaller):
         os.system("cp -r themes ~/.themes")
 
     def move_images(self):
-        ...
+        os.system('cp -r Images/* ~/Images/')
