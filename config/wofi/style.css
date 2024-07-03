@@ -1,12 +1,46 @@
 window {
-    font-size: 18px;
+    font-size: 1.04em;
+    outline: none;
+    border: none;
+}
+
+#input {
+    margin-bottom: 10px;
+    border-bottom: 3x solid gray;
 }
 
 #entry {
-     padding: 0.25em;
+    padding: 0.25em;
+    border-radius: 0;
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 30%;
+}
+
+#entry text {
+    width: 100%;
 }
 
 image {
     margin-left: .25em;
     margin-right: .25em;
+}
+
+#inner-box {
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    outline: none;
+}
+
+#outer-box {
+    border: none;
+    outline: none;
+}
+
+#entry:selected {
+    border: 1px solid gray;
+    outline: none;
 }
