@@ -23,5 +23,5 @@ class Logger(ILogger):
         print(message)
 
     def _save_to_file(self, message):
-        with open(path.expanduser('~') + '/bspwm_install_logs.log', 'a') as file:
+        with open(path.expanduser('~') + '/Hyprland_install_logs.log', 'a') as file:
             file.write(message)

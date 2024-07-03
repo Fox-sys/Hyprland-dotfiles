@@ -5,6 +5,6 @@ if [[ $USER = "root" ]] ; then
   exit
 fi
 
-export PYTHONPATH="${PYTHONPATH}:/home/${USER}/bspwm-dotfiles/Builder"
+export PYTHONPATH="${PYTHONPATH}:/home/${USER}/Hyprland-dotfiles/Builder"
 poetry install
 poetry run python Builder/src/run/install.py
