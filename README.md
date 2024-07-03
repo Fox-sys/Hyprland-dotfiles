@@ -2,7 +2,8 @@
 
 ## Установка
 
-- Установить Arch (не стоит ставить multilib руками, иначе установка драйверов работать не будет)
+- Установить Arch
+- Включить multilib
 - Отредактировать файл `/etc/locale.gen` и раскоментировать `ru_RU.UTF-8`
 - `sudo locale-gen`
 - `sudo pacman -S git python3 poetry`
