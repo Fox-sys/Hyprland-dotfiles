@@ -12,7 +12,7 @@ PACMAN_DEPENDENCIES = [
 ]
 
 AUR_DEPENDENCIES = [
-    'google-chrome', 'hyprshot',
+    'google-chrome', 'hyprshot', 'hyprpicker-git'
 ]
 
 DRIVER_PACKAGES = {
