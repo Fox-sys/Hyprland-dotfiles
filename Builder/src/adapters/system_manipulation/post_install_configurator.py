@@ -8,5 +8,6 @@ class PostInstallConfigurator(IPostInstallConfigurator):
         ...
 
     def apply_patches(self):
-        os.system("sudo ln -sf /usr/bin/alacritty /usr/bin/xterm")
-        os.system("sudo chmod -R 700 ~/.config/*")
+        os.system('sudo ln -sf /usr/bin/alacritty /usr/bin/xterm')
+        os.system('sudo chmod -R 700 ~/.config/*')
+        os.system('sudo echo "Hyprland" >> /etc/profile')
