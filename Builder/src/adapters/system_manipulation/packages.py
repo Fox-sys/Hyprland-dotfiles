@@ -7,7 +7,8 @@ PACMAN_DEPENDENCIES = [
     'libx11', 'libxcomposite', 'xorg-xinput', 'libxrender', 'pixman', 'wayland-protocols', 'cairo', 'pango', 'seatd',
     'libxkbcommon', 'xcb-util-wm', 'xorg-xwayland', 'libinput', 'libliftoff', 'libdisplay-info', 'cpio', 'tomlplusplus',
     'hyprlang', 'hyprcursor', 'hyprwayland-scanner', 'xcb-util-errors', 'curl', 'wget', 'micro', 'hyprland',
-    'telegram-desktop', 'fastfetch', 'hyprpaper', 'unzip', 'unrar', 'p7zip', 'openssh', 'cliphist', 'udiskie'
+    'telegram-desktop', 'fastfetch', 'hyprpaper', 'unzip', 'unrar', 'p7zip', 'openssh', 'cliphist', 'udiskie',
+    'file-roller'
 ]
 
 AUR_DEPENDENCIES = [

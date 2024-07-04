@@ -11,7 +11,7 @@ class DriverInstallInterface(BaseInterface):
     def _params(self) -> list[dict]:
         return [
             {'name': 'driver_type',
-             'question': '\tВыберете драйвер для установки ' + ' | '
+             'question': '\tChoose graphics driver to install' + ' | '
              .join([f'{i + 1} = {enum_key.value}' for i, enum_key in self._dicted_enum.items()])}]
 
     def start(self) -> dict:
