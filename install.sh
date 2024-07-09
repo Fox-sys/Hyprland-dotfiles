@@ -7,4 +7,4 @@ fi
 
 export PYTHONPATH="${PYTHONPATH}:/home/${USER}/Hyprland-dotfiles/Builder"
 poetry install
-poetry run python Builder/src/run/install.py
+poetry run python Builder/src/run/install.py &> ~/hyprland-install-full.log
