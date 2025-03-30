@@ -8,7 +8,7 @@ PACMAN_DEPENDENCIES = [
     'libxkbcommon', 'xcb-util-wm', 'xorg-xwayland', 'libinput', 'libliftoff', 'libdisplay-info', 'cpio', 'tomlplusplus',
     'hyprlang', 'hyprcursor', 'hyprwayland-scanner', 'xcb-util-errors', 'curl', 'wget', 'micro', 'hyprland',
     'telegram-desktop', 'fastfetch', 'hyprpaper', 'unzip', 'unrar', 'p7zip', 'openssh', 'cliphist', 'udiskie',
-    'file-roller', 'hyprpicker', 'firefox'
+    'file-roller', 'hyprpicker', 'firefox', 'noto-fonts-cjk', 'noto-fonts-emoji', 'noto-fonts', 'swaync'
 ]
 
 AUR_DEPENDENCIES = [
