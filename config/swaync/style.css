@@ -1,0 +1,172 @@
+/* Dracula Theme */
+@define-color foreground rgb(248, 248, 242);
+@define-color background rgb(40, 42, 54);
+@define-color background-alpha rgba(40, 42, 54, 0.95);
+@define-color accent rgb(167, 78, 130);
+@define-color current-line rgb(68, 71, 90);
+@define-color comment rgb(98, 114, 164);
+
+.notification-row {
+  transition: all 200ms ease;
+  outline: none;
+  margin: 0px 13px 4px 0;
+  border-radius: 80px;
+}
+
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+  opacity: 1;
+  background: @current-line;
+}
+
+.notification-row:focus .notification,
+.notification-row:hover .notification {
+  box-shadow: none;
+  border: 1px solid @accent;
+  background: @current-line;
+}
+
+.control-center .notification {
+  box-shadow: none;
+}
+
+.control-center .notification-row {
+  opacity: 0.5;
+  margin: 0px;
+}
+
+.notification {
+  transition: all 200ms ease;
+  border-radius: 8px;
+  margin: 12px 7px 0 7px;
+  box-shadow: none;
+  padding: 0;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 6px;
+  margin: 0;
+  box-shadow: none;
+  background: @current-line;
+  border: 2px solid @current-line;
+  color: @foreground;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  background: @current-line;
+}
+
+.notification-default-action {
+  border-radius: 8px;
+}
+
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.notification-action {
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+}
+/*
+.notification-action:first-child {
+  border-bottom-left-radius: 45px !important;
+} */
+
+.notification-action:last-child {
+  /* border-bottom-right-radius: 45px !important; */
+  border-right: 1px solid @accent;
+}
+
+.close-button {
+  background: @current-line;
+  color: @foreground;
+  border: none;
+  border-radius: 50%;
+  margin: 17px 10px 0 0;
+  box-shadow: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background: @comment;
+  transition: all 0.15s ease-in-out;
+}
+
+.control-center {
+  background: @background-alpha;
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: none;
+  color: @foreground;
+  border: 2px solid @accent;
+}
+
+.control-center-dnd {
+  border-radius: 8px;
+  background: @background;
+  border: 2px solid @accent;
+  box-shadow: none;
+}
+
+.control-center-dnd:checked {
+  background: @accent;
+}
+
+.control-center-dnd > slider {
+  background: @background;
+  border-radius: 8px;
+}
+
+.widget-title {
+  margin: 8px;
+  font-size: 1.5rem;
+}
+
+.widget-title > button {
+  color: @foreground;
+  background: @background;
+  border: 2px solid @accent;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.widget-title > button:hover {
+  background: @current-line;
+}
+
+.widget-dnd {
+  margin: 8px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  border-radius: 45px;
+  background: @background;
+  border: 2px solid @accent;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: @accent;
+}
+
+.widget-dnd > switch > slider {
+  background: @current-line;
+  border-radius: 45px;
+  border: 2px solid @background;
+}
+
+.widget-mpris-player {
+  padding: 8px;
+  margin: 20px 20px 0px 20px;
+  background-color: @current-line;
+  border-radius: 12px;
+  border: 2px solid @current-line;
+  color: @foreground;
+}
