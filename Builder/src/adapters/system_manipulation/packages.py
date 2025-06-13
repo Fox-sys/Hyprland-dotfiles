@@ -8,11 +8,12 @@ PACMAN_DEPENDENCIES = [
     'libxkbcommon', 'xcb-util-wm', 'xorg-xwayland', 'libinput', 'libliftoff', 'libdisplay-info', 'cpio', 'tomlplusplus',
     'hyprlang', 'hyprcursor', 'hyprwayland-scanner', 'xcb-util-errors', 'curl', 'wget', 'micro', 'hyprland',
     'telegram-desktop', 'fastfetch', 'hyprpaper', 'unzip', 'unrar', 'p7zip', 'openssh', 'cliphist', 'udiskie',
-    'file-roller', 'hyprpicker', 'firefox', 'noto-fonts-cjk', 'noto-fonts-emoji', 'noto-fonts', 'swaync', 'make', 'sddm'
+    'file-roller', 'hyprpicker', 'firefox', 'noto-fonts-cjk', 'noto-fonts-emoji', 'noto-fonts', 'swaync', 'make',
+    'sddm', 'xorg-xhost', 'hyprpolkitagent'
 ]
 
 AUR_DEPENDENCIES = [
-    'hyprshot', 'sddm-theme-sugar-candy'
+    'hyprshot', 'sddm-theme-sugar-candy', 'amdgpu-fan-curve'
 ]
 
 DRIVER_PACKAGES = {
