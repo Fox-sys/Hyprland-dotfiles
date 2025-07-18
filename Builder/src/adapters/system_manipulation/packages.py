@@ -9,7 +9,7 @@ PACMAN_DEPENDENCIES = [
     'hyprlang', 'hyprcursor', 'hyprwayland-scanner', 'xcb-util-errors', 'curl', 'wget', 'micro', 'hyprland',
     'telegram-desktop', 'fastfetch', 'hyprpaper', 'unzip', 'unrar', 'p7zip', 'openssh', 'cliphist', 'udiskie',
     'file-roller', 'hyprpicker', 'firefox', 'noto-fonts-cjk', 'noto-fonts-emoji', 'noto-fonts', 'swaync', 'make',
-    'sddm', 'xorg-xhost', 'hyprpolkitagent'
+    'sddm', 'xorg-xhost', 'polkit-gnome'
 ]
 
 AUR_DEPENDENCIES = [
