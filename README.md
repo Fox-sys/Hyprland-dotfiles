@@ -1,10 +1,10 @@
-# Мой билдер для Hyprland
+# My own desktop environment based on Hyprland
 
-## Установка
+## Installing
 
-- Установить Arch
-- Включить multilib
-- Отредактировать файл `/etc/locale.gen` и раскоментировать `ru_RU.UTF-8`
+- Download Arch (Type minimal)
+- Enable multilib
+- Edit `/etc/locale.gen` to enable your locale
 - `sudo locale-gen`
 - `sudo pacman -S git python3 poetry`
 - `git clone https://github.com/Fox-sys/Hyprland-dotfiles.git`

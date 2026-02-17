@@ -9,6 +9,6 @@ class DriverInstallService:
     logger: ILogger
 
     def install_drivers(self):
-        self.logger.info(f'Устанавливаются драйвера {self.driver_installer.type}')
+        self.logger.info(f'Installing driver {self.driver_installer.type}...')
         self.driver_installer.install_packages()
         self.driver_installer.post_installing()
