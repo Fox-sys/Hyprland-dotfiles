@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+HISTORY_FILE="$HOME/.cache/wofi_calc_history"
+touch "$HISTORY_FILE"
+
+LAST_RESULT=""
+
+while true; do
+    if [ -n "$LAST_RESULT" ]; then
+        PROMPT_TEXT="Last: $LAST_RESULT | Enter expression:"
+    else
+        PROMPT_TEXT="Calculator (e.g. 2+2 or 15%3)"
+    fi
+
+    USER_INPUT=$( (echo ""; tac "$HISTORY_FILE") | wofi --dmenu \
+        --prompt "$PROMPT_TEXT" \
+        --window_title "Calculator" \
+        --cache-file /dev/null)
+
+    if [ -z "$USER_INPUT" ]; then
+        exit 0
+    fi
+
+    if echo "$USER_INPUT" | grep -q '='; then
+        RESULT=$(echo "$USER_INPUT" | awk -F ' = ' '{print $2}' | xargs)
+        echo -n "$RESULT" | wl-copy --type text/plain --trim-newline
+        LAST_RESULT="$RESULT (copied)"
+        continue
+    fi
+
+    EXPRESSION=$(echo "$USER_INPUT" | tr -d ' ')
+
+    # Умная проверка: если в строке есть %, считаем с scale=0 и убираем флаг -l
+    if echo "$EXPRESSION" | grep -q '%'; then
+        RESULT=$(echo "scale=0; $EXPRESSION" | bc 2>/dev/null)
+    else
+        RESULT=$(echo "scale=4; $EXPRESSION" | bc -l 2>/dev/null)
+    fi
+
+    if [ -n "$RESULT" ] && [ "$RESULT" != "$EXPRESSION" ]; then
+        # Форматируем нули (только если это не чистый ноль)
+        if [ "$RESULT" != "0" ]; then
+            RESULT=$(echo "$RESULT" | sed -e 's/^\./0./' -e 's/\.\([0-9]*[1-9]\)0\+$/.\1/' -e 's/\.0\+$//' | xargs)
+        fi
+        
+        RECORD="$EXPRESSION = $RESULT"
+        
+        sed -i "\|^$RECORD$|d" "$HISTORY_FILE"
+        echo "$RECORD" >> "$HISTORY_FILE"
+        
+        echo -n "$RESULT" | wl-copy --type text/plain --trim-newline
+        LAST_RESULT="$RESULT"
+    else
+        LAST_RESULT="Error: Invalid expression"
+    fi
+done

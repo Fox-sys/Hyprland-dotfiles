@@ -1,0 +1,754 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- RNNoise suppression for voice -->
+ <Plugin>
+  <Info>
+   <Type>VST2</Type>
+   <Name>RNNoise suppression for voice</Name>
+   <Binary>/usr/lib/lxvst/librnnoise_mono.so</Binary>
+   <UniqueID>1382968881</UniqueID>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x9</Options>
+
+   <Chunk>
+VkMyIdEAAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8Uk5Ob2lzZT48UEFSQU0gaWQ9InZhZF9ncmFjZV9wZXJpb2QiIHZhbHVl
+PSI1NC4wIi8+PFBBUkFNIGlkPSJ2YWRfcmV0cm9hY3RpdmVfZ3JhY2VfcGVyaW9kIiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJ2YWRfdGhyZXNob2xkIiB2
+YWx1ZT0iMC4xNDAwMDAwMDA1OTYwNDY0Ii8+PC9STk5vaXNlPgA=
+   </Chunk>
+  </Data>
+ </Plugin>
+
+ <!-- LSP Graphic Equalizer x16 Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>LSP Graphic Equalizer x16 Stereo</Name>
+   <URI>http://lsp-plug.in/plugins/lv2/graph_equalizer_x16_stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enabled</Name>
+    <Symbol>enabled</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input gain</Name>
+    <Symbol>g_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output gain</Name>
+    <Symbol>g_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Equalizer mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter slope</Name>
+    <Symbol>slope</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>FFT reactivity</Name>
+    <Symbol>react</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Shift gain</Name>
+    <Symbol>shift</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Graph zoom</Name>
+    <Symbol>zoom</Symbol>
+    <Value>0.0158500000834465</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Input FFT graph enable Left</Name>
+    <Symbol>ife_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Output FFT graph enable Left</Name>
+    <Symbol>ofe_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Return FFT graph enable Left</Name>
+    <Symbol>rfe_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Input FFT graph enable Right</Name>
+    <Symbol>ife_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Output FFT graph enable Right</Name>
+    <Symbol>ofe_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Return FFT graph enable Right</Name>
+    <Symbol>rfe_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Output balance</Name>
+    <Symbol>bal</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Band solo 16</Name>
+    <Symbol>xs_0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Band mute 16</Name>
+    <Symbol>xm_0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Band on 16</Name>
+    <Symbol>xe_0</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Band gain 16</Name>
+    <Symbol>g_0</Symbol>
+    <Value>0.0189078114926815</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Band solo 25</Name>
+    <Symbol>xs_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Band mute 25</Name>
+    <Symbol>xm_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Band on 25</Name>
+    <Symbol>xe_1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Band gain 25</Name>
+    <Symbol>g_1</Symbol>
+    <Value>0.59538733959198</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Band solo 40</Name>
+    <Symbol>xs_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Band mute 40</Name>
+    <Symbol>xm_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Band on 40</Name>
+    <Symbol>xe_2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Band gain 40</Name>
+    <Symbol>g_2</Symbol>
+    <Value>0.781198799610138</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Band solo 63</Name>
+    <Symbol>xs_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Band mute 63</Name>
+    <Symbol>xm_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Band on 63</Name>
+    <Symbol>xe_3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Band gain 63</Name>
+    <Symbol>g_3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Band solo 100</Name>
+    <Symbol>xs_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Band mute 100</Name>
+    <Symbol>xm_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Band on 100</Name>
+    <Symbol>xe_4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Band gain 100</Name>
+    <Symbol>g_4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Band solo 160</Name>
+    <Symbol>xs_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Band mute 160</Name>
+    <Symbol>xm_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>Band on 160</Name>
+    <Symbol>xe_5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Band gain 160</Name>
+    <Symbol>g_5</Symbol>
+    <Value>1.59864902496338</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Band solo 250</Name>
+    <Symbol>xs_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Band mute 250</Name>
+    <Symbol>xm_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Band on 250</Name>
+    <Symbol>xe_6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>Band gain 250</Name>
+    <Symbol>g_6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>Band solo 400</Name>
+    <Symbol>xs_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>Band mute 400</Name>
+    <Symbol>xm_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>Band on 400</Name>
+    <Symbol>xe_7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>Band gain 400</Name>
+    <Symbol>g_7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>Band solo 630</Name>
+    <Symbol>xs_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>Band mute 630</Name>
+    <Symbol>xm_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>Band on 630</Name>
+    <Symbol>xe_8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>Band gain 630</Name>
+    <Symbol>g_8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>Band solo 1K</Name>
+    <Symbol>xs_9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>Band mute 1K</Name>
+    <Symbol>xm_9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>Band on 1K</Name>
+    <Symbol>xe_9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>Band gain 1K</Name>
+    <Symbol>g_9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>Band solo 1.6K</Name>
+    <Symbol>xs_10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Band mute 1.6K</Name>
+    <Symbol>xm_10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>Band on 1.6K</Name>
+    <Symbol>xe_10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>Band gain 1.6K</Name>
+    <Symbol>g_10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>Band solo 2.5K</Name>
+    <Symbol>xs_11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>Band mute 2.5K</Name>
+    <Symbol>xm_11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>Band on 2.5K</Name>
+    <Symbol>xe_11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Band gain 2.5K</Name>
+    <Symbol>g_11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Band solo 4K</Name>
+    <Symbol>xs_12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Band mute 4K</Name>
+    <Symbol>xm_12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>Band on 4K</Name>
+    <Symbol>xe_12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>Band gain 4K</Name>
+    <Symbol>g_12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>Band solo 6.3K</Name>
+    <Symbol>xs_13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>Band mute 6.3K</Name>
+    <Symbol>xm_13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>Band on 6.3K</Name>
+    <Symbol>xe_13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>Band gain 6.3K</Name>
+    <Symbol>g_13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>Band solo 10K</Name>
+    <Symbol>xs_14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>Band mute 10K</Name>
+    <Symbol>xm_14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>Band on 10K</Name>
+    <Symbol>xe_14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>Band gain 10K</Name>
+    <Symbol>g_14</Symbol>
+    <Value>1.15969324111938</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>Band solo 16K</Name>
+    <Symbol>xs_15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>95</Index>
+    <Name>Band mute 16K</Name>
+    <Symbol>xm_15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>Band on 16K</Name>
+    <Symbol>xe_15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>Band gain 16K</Name>
+    <Symbol>g_15</Symbol>
+    <Value>1.31208515167236</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/graph_equalizer_x16_stereo/ports#send</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/graph_equalizer_x16_stereo/ports#return</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Object</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/graph_equalizer_x16_stereo/preset_state</Key>
+    <Value>AAAAAFUAAABWAAAAAAAAAAEAAAARAAAAAAAAAAAAAABXAAAAAAAAAAQAAAAHAAAAAAAAAAAAAABYAAAAAAAAAAQAAAAHAAAAAAAAAAAAAAA=</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen 0:capture_AUX0</Source>
+   <Target>Split Scarlett 2i2 4th Gen Input 1 Mic/Inst/Line:input_AUX0</Target>
+  </Connection>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen 0:capture_AUX1</Source>
+   <Target>Split Scarlett 2i2 4th Gen Input 2 Mic/Inst/Line:input_AUX1</Target>
+  </Connection>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen 0:capture_AUX2</Source>
+   <Target>Split Scarlett 2i2 4th Gen Monitor Input 3+4 (stereo):input_AUX2</Target>
+  </Connection>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen 0:capture_AUX3</Source>
+   <Target>Split Scarlett 2i2 4th Gen Monitor Input 3+4 (stereo):input_AUX3</Target>
+  </Connection>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen Input 2 Mic/Inst/Line:capture_MONO</Source>
+   <Target>RNNoise suppression for voice:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen Input 2 Mic/Inst/Line:capture_MONO</Source>
+   <Target>RNNoise suppression for voice:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Scarlett 2i2 4th Gen Input 1 Mic/Inst/Line:capture_MONO</Source>
+   <Target>JUCEJack:in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>RNNoise suppression for voice:output_1</Source>
+   <Target>LSP Graphic Equalizer x16 Stereo:Input L</Target>
+  </Connection>
+  <Connection>
+   <Source>RNNoise suppression for voice:output_1</Source>
+   <Target>LSP Graphic Equalizer x16 Stereo:Input R</Target>
+  </Connection>
+  <Connection>
+   <Source>LSP Graphic Equalizer x16 Stereo:Output L</Source>
+   <Target>VirtualMic:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>LSP Graphic Equalizer x16 Stereo:Output R</Source>
+   <Target>VirtualMic:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FL-44924</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FR-44925</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>JUCEJack:out_1</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>JUCEJack:out_2</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FL-44899</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FR-44900</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FL</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FR</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FL-44929</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox:output_FR-44930</Source>
+   <Target>Scarlett 2i2 4th Gen Headphones / Line 1-2:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>VirtualMic:monitor_FL</Source>
+   <Target>VirtualMic-116:input_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>VirtualMic:monitor_FR</Source>
+   <Target>VirtualMic-116:input_FR</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1006" y1="1723">
+    <Name>VirtualMic-115</Name>
+   </Position>
+   <Position x1="1262" y1="2054" x2="1996" y2="1348">
+    <Name>Scarlett 2i2 4th Gen 0</Name>
+   </Position>
+   <Position x1="14" y1="1333">
+    <Name>Scarlett 2i2 4th Gen Input 2 Mic/Inst/Line</Name>
+   </Position>
+   <Position x1="1550" y1="1792" x2="2082" y2="1297">
+    <Name>Scarlett 2i2 4th Gen Headphones / Line 1-2</Name>
+   </Position>
+   <Position x1="1542" y1="2102">
+    <Name>Split Scarlett 2i2 4th Gen Input 2 Mic/Inst/Line</Name>
+   </Position>
+   <Position x1="821" y1="1332">
+    <Name>VirtualMic</Name>
+   </Position>
+   <Position x1="1138" y1="1319">
+    <Name>VirtualMic-116</Name>
+   </Position>
+   <Position x1="314" y1="1323" pluginId="0">
+    <Name>RNNoise suppression for voice</Name>
+   </Position>
+   <Position x1="554" y1="1328" pluginId="1">
+    <Name>LSP Graphic Equalizer x16 Stereo</Name>
+   </Position>
+   <Position x1="1998" y1="1446">
+    <Name>JUCEJack</Name>
+   </Position>
+   <Position x1="1603" y1="1093">
+    <Name>Firefox</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

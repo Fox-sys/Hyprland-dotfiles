@@ -1,83 +1,137 @@
+/* Palette. Accent = Hyprland general.col.active_border (hypr/hyprland/general.lua) */
+@define-color accent   #A74E82;
+@define-color bg       #2B252E;
+@define-color border   #303030;
+@define-color fg       #ffffff;
+@define-color fg-dim   alpha(@fg, 0.55);
+@define-color warning  #e5a50a;
+@define-color critical #eb4d4b;
+
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif, 'Linux Libertine O';
+    /* Roboto for text, the Nerd Font fills in the icon glyphs */
+    font-family: Roboto, "JetBrainsMono Nerd Font Propo", sans-serif;
     font-size: 13px;
+    min-height: 0;
 }
 
+/* Keep the surface itself transparent and draw the rounded bar on the inner box,
+   otherwise the corners outside border-radius flicker black on partial redraws */
 window#waybar {
-    background-color: #2B252E;
-    border: 3px solid #303030;
+    background-color: transparent;
+    color: @fg;
+}
+
+window#waybar > box {
+    background-color: @bg;
+    border: 2px solid @border;
     border-radius: 10px;
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
+tooltip {
+    background-color: @bg;
+    border: 1px solid @accent;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 2px 4px;
+}
+
+/* ---------- Workspaces ---------- */
+
+#workspaces {
+    margin-left: 8px;
+}
+
+#workspaces button {
+    /* box-shadow instead of border so the label isn't offset */
+    padding: 0 8px;
+    margin: 3px 1px;
+    border: none;
+    border-radius: 6px;
     background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
+    box-shadow: inset 0 -2px transparent;
+    color: @fg-dim;
+    transition: background-color 200ms ease, box-shadow 200ms ease, color 200ms ease;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: alpha(@accent, 0.25);
+    box-shadow: inset 0 -2px @accent;
+    color: @fg;
 }
 
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+#workspaces button.active {
+    background-color: alpha(@accent, 0.45);
+    box-shadow: inset 0 -2px @accent;
+    color: @fg;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: alpha(@critical, 0.6);
+    color: @fg;
 }
 
-#tray, #cpu, #memory, #temperature, #pulseaudio, #clock, #network, #language {
-    margin: 2px 4px;
-    padding: 0 6px;
+/* ---------- Modules ---------- */
+
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#network,
+#language,
+#tray,
+#clock,
+#custom-notification {
+    margin: 3px 0;
+    padding: 0 8px;
+    border-radius: 6px;
+    transition: background-color 200ms ease, color 200ms ease;
 }
 
 .modules-right {
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
-#workspaces {
-    margin-left: 10px;
+/* Clickable modules get the same hover feedback as workspaces */
+#pulseaudio:hover,
+#clock:hover,
+#custom-notification:hover {
+    background-color: alpha(@accent, 0.25);
+}
+
+#cpu.warning,
+#memory.warning {
+    color: @warning;
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    color: @critical;
+}
+
+#pulseaudio.muted,
+#network.disconnected {
+    color: @fg-dim;
+}
+
+#clock {
+    font-feature-settings: "tnum";
+}
+
+#tray > .needs-attention {
+    background-color: alpha(@critical, 0.6);
+    border-radius: 6px;
+}
+
+#tray menu {
+    background-color: @bg;
+    border: 1px solid @border;
 }

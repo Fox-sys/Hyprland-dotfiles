@@ -9,7 +9,8 @@ PACMAN_DEPENDENCIES = [
     'hyprlang', 'hyprcursor', 'hyprwayland-scanner', 'xcb-util-errors', 'curl', 'wget', 'micro', 'hyprland',
     'telegram-desktop', 'fastfetch', 'hyprpaper', 'unzip', 'unrar', 'p7zip', 'openssh', 'cliphist', 'udiskie',
     'file-roller', 'hyprpicker', 'firefox', 'noto-fonts-cjk', 'noto-fonts-emoji', 'noto-fonts', 'swaync', 'make',
-    'sddm', 'xorg-xhost', 'polkit-gnome'
+    'sddm', 'xorg-xhost', 'polkit-gnome', 'carla', 'lsp-plugins-lv2', 'noise-suppression-for-voice', 'pipewire-jack',
+    'pipewire-pulse', 'bc', 'wl-clipboard'
 ]
 
 AUR_DEPENDENCIES = [
